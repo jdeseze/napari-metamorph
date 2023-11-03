@@ -1,2 +1,2 @@
-# napari-metamorph-ndreader
+# napari-metamorph
 reader of nd files from metamorph
