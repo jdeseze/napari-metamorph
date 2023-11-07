@@ -1,0 +1,57 @@
+name: napari-metamorph
+display_name: Metamorph files reader
+# use 'hidden' to remove plugin from napari hub search results
+visibility: public
+# see https://napari.org/stable/plugins/manifest.html for valid categories
+categories: ["Annotation", "Segmentation", "Acquisition"]
+contributions:
+  commands:
+    - id: napari-metamorph.get_reader
+      python_name: napari_metamorph._reader:napari_get_reader
+      title: Open data with Metamorph files reader
+    - id: napari-metamorph.write_multiple
+      python_name: napari_metamorph._writer:write_multiple
+      title: Save multi-layer data with Metamorph files reader
+    - id: napari-metamorph.write_single_image
+      python_name: napari_metamorph._writer:write_single_image
+      title: Save image data with Metamorph files reader
+    - id: napari-metamorph.make_sample_data
+      python_name: napari_metamorph._sample_data:make_sample_data
+      title: Load sample data from Metamorph files reader
+    - id: napari-metamorph.make_container_widget
+      python_name: napari_metamorph:ImageThreshold
+      title: Make threshold Container widget
+    - id: napari-metamorph.make_magic_widget
+      python_name: napari_metamorph:threshold_magic_widget
+      title: Make threshold magic widget
+    - id: napari-metamorph.make_function_widget
+      python_name: napari_metamorph:threshold_autogenerate_widget
+      title: Make threshold function widget
+    - id: napari-metamorph.make_qwidget
+      python_name: napari_metamorph:ExampleQWidget
+      title: Make example QWidget
+  readers:
+    - command: napari-metamorph.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy']
+  writers:
+    - command: napari-metamorph.write_multiple
+      layer_types: ['image*','labels*']
+      filename_extensions: []
+    - command: napari-metamorph.write_single_image
+      layer_types: ['image']
+      filename_extensions: ['.npy']
+  sample_data:
+    - command: napari-metamorph.make_sample_data
+      display_name: Metamorph files reader
+      key: unique_id.1
+  widgets:
+    - command: napari-metamorph.make_container_widget
+      display_name: Container Threshold
+    - command: napari-metamorph.make_magic_widget
+      display_name: Magic Threshold
+    - command: napari-metamorph.make_function_widget
+      autogenerate: true
+      display_name: Autogenerate Threshold
+    - command: napari-metamorph.make_qwidget
+      display_name: Example QWidget

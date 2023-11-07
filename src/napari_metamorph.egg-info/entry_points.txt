@@ -1,0 +1,2 @@
+[napari.manifest]
+napari-metamorph = napari_metamorph:napari.yaml
