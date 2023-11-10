@@ -33,7 +33,7 @@ contributions:
   readers:
     - command: napari-metamorph.get_reader
       accepts_directories: false
-      filename_patterns: ['*.npy']
+      filename_patterns: ['*.nd']
   writers:
     - command: napari-metamorph.write_multiple
       layer_types: ['image*','labels*']

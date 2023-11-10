@@ -62,6 +62,7 @@ def threshold_magic_widget(
     return img_as_float(img_layer.data) > threshold
 
 
+
 # if we want even more control over our widget, we can use
 # magicgui `Container`
 class ImageThreshold(Container):
