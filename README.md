@@ -41,7 +41,8 @@ Distributed under the terms of the [BSD-3] license,
 ## Issues
 
 If you encounter any problems, please [file an issue] along with a detailed description.
-If it doesn't wor, try to import the library in Pyhton. It happened that pooch was missiong, which only requires "conda -c conda-forge install pooch"
+
+If it doesn't work, try to import the library in Pyhton. It happened that pooch was missiong, which only requires "conda -c conda-forge install pooch"
 
 [napari]: https://github.com/napari/napari
 [Cookiecutter]: https://github.com/audreyr/cookiecutter
