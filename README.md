@@ -9,7 +9,7 @@
 
 A simple plugin to read .nd files and .rgn files from Metamorph
 
-It is inspired from the ImageJ plugin from Fabrice Cordelier (https://imagej.net/ij/plugins/track/builder.html), many thanks to him! 
+It is inspired from the ImageJ plugin from Fabrice Cordelieres (https://imagej.net/ij/plugins/track/builder.html), many thanks to him! 
 
 ----------------------------------
 
