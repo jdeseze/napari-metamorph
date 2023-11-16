@@ -33,6 +33,7 @@ only basic modules are needed, but there are detailed in requirements.txt
 
 When installed, you can find the plugin in the 'Plugins' as 'Nd reader (napari-metamorph)'
 When you click on it, a widget should appear on the right. 
+
 ![image](https://github.com/jdeseze/napari-metamorph/assets/68115566/aa21c612-736b-4bbd-bd7d-58e06ee74f8a)
 
 With the 'Select folder' button, you can select folder in which there is at least one Metamorph experiment with an .nd file.
