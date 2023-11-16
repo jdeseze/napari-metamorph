@@ -109,7 +109,7 @@ class NdReaderWidget(QWidget):
             self.nd_exp.nd_reader(os.path.join(self.folder[0],self.list_ndfiles.currentText()))
         except:
             mess=QMessageBox(self)
-            mess.setText('Unable to load experiment')
+            mess.setText('Unable to load experiment, or no .nd file in the folder')
             self.layout().addWidget(mess) 
         
         if self.nd_exp.do_stage:
@@ -118,9 +118,12 @@ class NdReaderWidget(QWidget):
         
     def load_images(self):
         #if he finds a shape layer, he keeps it
+        is_shape=False
         for layer in self.viewer.layers:
             if type(layer)==napari.layers.shapes.shapes.Shapes:
                 shape=layer
+                is_shape=True
+                
                 
         #clear all layers
         if self.keep_layers.checkState()==0:
@@ -132,16 +135,20 @@ class NdReaderWidget(QWidget):
         except:
             pos=0
         self.nd_exp.build_layers(pos)
-        for image_layer in self.nd_exp.image_layers:
-            #add each wavelength
-            self.viewer.add_image(image_layer[0],**image_layer[1]) 
-            self.viewer.layers[-1].reset_contrast_limits()
+
+        try:
+            for image_layer in self.nd_exp.image_layers:
+                #add each wavelength
+                self.viewer.add_image(image_layer[0],**image_layer[1]) 
+                self.viewer.layers[-1].reset_contrast_limits()
+        except:
+            mess=QMessageBox(self)
+            mess.setText('Cannot read images. They could be no complete timepoints, or the images corresponding to the .nd file are not in the folder')
+            self.layout().addWidget(mess) 
         
         #add the shape layer on top 
-        try:
+        if is_shape:
             self.viewer.add_layer(shape)
-        except:
-            pass
 
         self.viewer.reset_view()
         self.viewer.grid.enabled=True
