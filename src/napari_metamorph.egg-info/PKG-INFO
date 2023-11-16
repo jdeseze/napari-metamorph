@@ -46,7 +46,7 @@ Requires-Dist: pyqt5; extra == "testing"
 [![codecov](https://codecov.io/gh/jdeseze/napari-metamorph/branch/main/graph/badge.svg)](https://codecov.io/gh/jdeseze/napari-metamorph)
 [![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/napari-metamorph)](https://napari-hub.org/plugins/napari-metamorph)
 
-A simple plugin to read .nd files and .rgn files from Metamorph
+A simple plugin to read .nd files and .rgn files from Metamorph (not usable for now, in progress)
 
 ----------------------------------
 
@@ -64,12 +64,6 @@ https://napari.org/stable/plugins/index.html
 
 You can install `napari-metamorph` via [pip]:
 
-    pip install napari-metamorph
-
-
-
-To install latest development version :
-
     pip install git+https://github.com/jdeseze/napari-metamorph.git
 
 
@@ -86,6 +80,8 @@ Distributed under the terms of the [BSD-3] license,
 ## Issues
 
 If you encounter any problems, please [file an issue] along with a detailed description.
+
+If it doesn't work, try to import the library in Pyhton. It happened that pooch was missiong, which only requires "conda -c conda-forge install pooch"
 
 [napari]: https://github.com/napari/napari
 [Cookiecutter]: https://github.com/audreyr/cookiecutter

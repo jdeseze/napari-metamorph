@@ -9,6 +9,7 @@ src/napari_metamorph/_sample_data.py
 src/napari_metamorph/_widget.py
 src/napari_metamorph/_writer.py
 src/napari_metamorph/napari.yaml
+src/napari_metamorph/ndreader.py
 src/napari_metamorph.egg-info/PKG-INFO
 src/napari_metamorph.egg-info/SOURCES.txt
 src/napari_metamorph.egg-info/dependency_links.txt
