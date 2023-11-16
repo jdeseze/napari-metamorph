@@ -52,6 +52,8 @@ You can click the 'Load image' button to see the images of the corresponding exp
 
 If you just want to go to the next position, you can click on the 'Next position' button. 
 
+WARNING: Z-STACKS ARE NOT SUPPORTED FOR THE MOMENT
+
 ## Contributing
 
 Contributions are very welcome. Tests can be run with [tox], please ensure
