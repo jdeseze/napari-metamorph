@@ -154,15 +154,14 @@ class NdReaderWidget(QWidget):
         self.viewer.grid.enabled=True
         
     def load_next_pos(self):
-                
-        #clear all layers
-        self.viewer.layers.clear()
         
         try:
             self.cell_nb.setCurrentIndex(self.cell_nb.currentIndex()+1)
             self.load_images()
         except:
-            self.viewer.layers.clear()
+            mess=QMessageBox(self)
+            mess.setText('It is the last position')
+            self.layout().addWidget(mess) 
         
         self.viewer.reset_view()
         self.viewer.grid.enabled=True
