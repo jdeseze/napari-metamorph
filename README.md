@@ -7,7 +7,9 @@
 [![codecov](https://codecov.io/gh/jdeseze/napari-metamorph/branch/main/graph/badge.svg)](https://codecov.io/gh/jdeseze/napari-metamorph)
 [![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/napari-metamorph)](https://napari-hub.org/plugins/napari-metamorph)
 
-A simple plugin to read .nd files and .rgn files from Metamorph (not usable for now, in progress)
+A simple plugin to read .nd files files from Metamorph (without z-stacks. it should come, as well as an .rgn reader)
+
+It is inspired from the ImageJ plugin from Fabrice Cordelieres (https://imagej.net/ij/plugins/track/builder.html), many thanks to him! 
 
 ----------------------------------
 
@@ -27,11 +29,37 @@ You can install `napari-metamorph` via [pip]:
 
     pip install git+https://github.com/jdeseze/napari-metamorph.git
 
+only basic modules are needed, but there are detailed in requirements.txt
+
+## Usage
+
+When installed, you can find the plugin in the 'Plugins' as 'Nd reader (napari-metamorph)'
+When you click on it, a widget should appear on the right. 
+
+![image](https://github.com/jdeseze/napari-metamorph/assets/68115566/aa21c612-736b-4bbd-bd7d-58e06ee74f8a)
+
+With the 'Select folder' button, you can select folder in which there is at least one Metamorph experiment with an .nd file.
+
+WARNING!! IT SHOULD BE THE RAW DATA, WITH ALL THE IMAGES TAKEN DURING A TIMELAPSE AS INDIVIDUAL FILES (AS THEY ARE SAVED BY METAMORPH)
+
+The first dropdown list lets you choose the .nd file, if you have multiple experiments in this folder.
+
+The second one lets you choose the stage position if you did multiple position. 
+
+If you select the 'Keep layers' button, you  should load the new layers on top of the ones you already have. Otherwise, the new experiment will be loaded alone. 
+
+You can click the 'Load image' button to see the images of the corresponding experiment+position. 
+
+If you just want to go to the next position, you can click on the 'Next position' button. 
+
+WARNING: Z-STACKS ARE NOT SUPPORTED FOR THE MOMENT
 
 ## Contributing
 
 Contributions are very welcome. Tests can be run with [tox], please ensure
 the coverage at least stays the same before you submit a pull request.
+
+Don't hesitate to tell me if you want some easy features to be added. 
 
 ## License
 
