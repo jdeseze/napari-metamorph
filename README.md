@@ -7,7 +7,7 @@
 [![codecov](https://codecov.io/gh/jdeseze/napari-metamorph/branch/main/graph/badge.svg)](https://codecov.io/gh/jdeseze/napari-metamorph)
 [![napari hub](https://img.shields.io/endpoint?url=https://api.napari-hub.org/shields/napari-metamorph)](https://napari-hub.org/plugins/napari-metamorph)
 
-A simple plugin to read .nd files and .rgn files from Metamorph
+A simple plugin to read .nd files files from Metamorph (without z-stacks. it should come, as well as an .rgn reader)
 
 It is inspired from the ImageJ plugin from Fabrice Cordelieres (https://imagej.net/ij/plugins/track/builder.html), many thanks to him! 
 
