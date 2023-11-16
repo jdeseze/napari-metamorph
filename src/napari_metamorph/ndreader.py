@@ -204,7 +204,7 @@ class NdExp:
                     self.file_name_list[index] = ''.join([self.file_name,
                                                         ('_w'+str(wave + 1) if self.do_wave else ''),
                                                         (self.wave_name[wave] if self.do_wave and self.wave_in_file_name else ''),
-                                                        ('_s' + str(pos + 1) if self.do_stage else ''),
+                                                        ('_s' + str(pos) if self.do_stage else ''),
                                                         '_t' + self.pad(curr_time, self.n_digits),
                                                         ('.tif' if (not self.do_wave or not self.wave_do_z[wave]) and (self.do_wave or not self.do_z_series) else self.extension_for_stack)])
                     index+=1
