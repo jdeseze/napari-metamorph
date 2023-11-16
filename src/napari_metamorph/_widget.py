@@ -79,7 +79,10 @@ class NdReaderWidget(QWidget):
         load_next.setText('Load next position')
         self.layout().addWidget(load_next)
         load_next.clicked.connect(self.load_next_pos)
-
+        
+        self.nd_exp=NdExp()
+        
+        
     '''function to choose the directory and have the experiments in the folder being displayed'''
     def choose_exp(self):
         dbox = QFileDialog(self)
