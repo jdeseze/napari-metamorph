@@ -56,7 +56,7 @@ WARNING: Z-STACKS ARE NOT SUPPORTED FOR THE MOMENT
 
 
 
-[![Watch the video](https://github.com/jdeseze/napari-metamorph/assets/68115566/c9770fb9-cd1d-4351-b18b-46e86565ca68)
+![Watch the video](https://github.com/jdeseze/napari-metamorph/assets/68115566/c9770fb9-cd1d-4351-b18b-46e86565ca68)
 
 
 ## Contributing
