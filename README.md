@@ -54,6 +54,11 @@ If you just want to go to the next position, you can click on the 'Next position
 
 WARNING: Z-STACKS ARE NOT SUPPORTED FOR THE MOMENT
 
+
+
+https://github.com/jdeseze/napari-metamorph/assets/68115566/c9770fb9-cd1d-4351-b18b-46e86565ca68
+
+
 ## Contributing
 
 Contributions are very welcome. Tests can be run with [tox], please ensure
